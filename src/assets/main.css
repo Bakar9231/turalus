@@ -28,8 +28,12 @@
   }
 
 } */
-
-
+a {
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Objective, sans-serif;
@@ -39,7 +43,8 @@ body {
   margin: 0;
   text-align: left;
   color: #212529;
-  background-color: #fff
+  background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -54,6 +59,32 @@ textarea {
   -webkit-font-smoothing: antialiased;
   font-weight: 400
 }
+
+section#locations .col-lg-12 {
+  padding: 0px 0px;
+}
+
+svg.locPin {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 6px;
+  z-index: 99999;
+  top: 8px;
+  fill: #c00a27;
+}
+
+.v-header--bgchange .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.v-header--bgchange .navbar-toggler {
+  color: rgba(0,0,0,.5);
+  border-color: rgba(0,0,0,.1);
+}
+
+
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -112,7 +143,7 @@ textarea {
 }
 
 .navbar-nav .nav-link {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: 700;
   position: relative;
   padding-top: 1rem;
@@ -160,7 +191,7 @@ textarea {
 }
 
 #address-search {
-  width: 500px;
+  width: 580px;
   position: relative;
   z-index: 9990
 }
@@ -294,9 +325,9 @@ textarea {
   display: block
 }
 
-.footer-row .row {
+/* .footer-row .row {
   flex-wrap: inherit !important
-}
+} */
 
 .row:before {
   content: ' ';
@@ -463,7 +494,8 @@ ul.store-timings>li:after {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  width: 100%
+  width: 100%;
+  z-index:9;
 }
 
 .footer-contact-form .contact-form {
@@ -577,6 +609,25 @@ input[type=submit] {
   display: none !important
 }
 
+.headroom {
+  transition:all ease-in-out 0.4s
+}
+
+.headroom a{
+  transition:all ease-in-out 0.4s
+}
+
+.v-header--bgchange {
+  background-color: white;
+  transition:all ease-in-out 0.4s
+}
+
+.v-header--bgchange a{
+  color: black !important;
+  transition:all ease-in-out 0.4s
+}
+
+
 @media only screen and (max-width:479px) {
   .catering-body-text {
     font-size: 7px;
@@ -597,6 +648,12 @@ input[type=submit] {
 }
 
 @media only screen and (max-width:767px) {
+  .footer-contact-info .form-group.row .col-xs-12.col-md-6:first-child {
+    margin-bottom: 15px;
+  }
+  .footer-contact-info{
+    float: inherit;
+  }
   .logo img {
     max-width: 330px
   }
@@ -731,3 +788,5 @@ input[type=submit] {
     max-width: 590px
   }
 }
+
+
