@@ -40,7 +40,6 @@
     }
     .headroom {
       transition: all ease-in-out 0.4s;
-      padding: 15px;
     }
     #address-search-container {
       position: inherit;

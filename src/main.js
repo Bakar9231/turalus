@@ -9,6 +9,7 @@ import "bootstrap"
 import './assets/main.css'
 import './assets/responsive.css'
 
+
 const app = createApp(App)
 
 app.use(createPinia())
