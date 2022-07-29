@@ -15,6 +15,8 @@
     }
   }
   @media only screen and (max-width: 767px) {
+
+    
     .logo img {
       max-width: 330px;
     }
@@ -27,38 +29,7 @@
     .catering-body-text {
       font-size: 10px;
     }
-    .col-md-12.address-search-col.mx-3 {
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-    }
-    .section{
-      padding-top: 5rem;
-      padding-bottom: 0px;
-    }
-    #address-search-container {
-      padding-bottom: 0px;
-    }
-    .headroom {
-      transition: all ease-in-out 0.4s;
-    }
-    #address-search-container {
-      position: inherit;
-    }
-
-    .collapse.navbar-collapse {
-      position: absolute;
-      top: -380px;
-      transition: all ease-in-out 0.6s;
-      display: block;
-      width: 100%;
-      background-color: white;
-      z-index: 2;
-    }
     
-    .collapse.navbar-collapse.customShow {
-      top: 45px;
-      transition: all ease-in-out 0.6s;
-    }
   }
   @media only screen and (max-width: 991px) {
     .site-info {
@@ -154,3 +125,42 @@
     }
   }
   
+
+  @media screen and (max-width:1200px){
+    .col-md-12.address-search-col.mx-3 {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+    .section{
+      padding-top: 5rem;
+      padding-bottom: 0px;
+    }
+    #address-search-container {
+      padding-bottom: 0px;
+    }
+    .headroom {
+      transition: all ease-in-out 0.4s;
+    }
+    #address-search-container {
+      position: inherit;
+    }
+
+    .collapse.navbar-collapse {
+      position: absolute;
+      top: -380px;
+      transition: all ease-in-out 0.6s;
+      display: block;
+      width: 100%;
+      background-color: white;
+      z-index: 2;
+    }
+    
+    .collapse.navbar-collapse.customShow {
+      top: 45px;
+      transition: all ease-in-out 0.6s;
+    }
+
+    div#mainMenu a {
+      color: black;
+    }
+  }

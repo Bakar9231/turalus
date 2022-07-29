@@ -140,8 +140,7 @@
 
 <script>
 
-import CustomGoogleAutocomplete from 'vue-custom-google-autocomplete'
-import { BulmaDropdown } from 'vue-custom-google-autocomplete'
+
 export default {
   name:'Homelayout',
   
