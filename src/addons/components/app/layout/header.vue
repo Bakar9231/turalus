@@ -57,10 +57,10 @@ export default {
       const percentage = (offsetTop * 100) / document.body.scrollHeight;
       console.log(percentage);
       let header = document.querySelector(".headroom")
-      
-      if(percentage > 0){
-        this.task();
-        header.className += " v-toolbar--bgchange";
+      if(!header.className.includes('v-toolbar--bgchange')){
+       
+          header.className += " v-toolbar--bgchange";
+        
       }
 
       else{
