@@ -10,14 +10,14 @@
 </div>
 <div class="row">
 <div class="col-md-12 address-search-col mx-3">
-<form id="address-search-container" @submit.prevent="location_insert"
+<form id="address-search-container" @submit.prevent="find_location"
           method="POST">
 <div class="content">
 <svg xmlns="http://www.w3.org/2000/svg" class="locPin" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
 </svg>
 
-<vue-google-autocomplete
+<!-- <vue-google-autocomplete
       id="map2"
   ref="toAddress"
   classname="form-control"
@@ -26,7 +26,9 @@
   types="(cities)"
   country="us"
     >
-    </vue-google-autocomplete>
+    </vue-google-autocomplete>-->
+
+    <input type="text" ref="autocomplete" placeholder="Search place" />
 
 </div>
 <input type="submit" value="Find location">
@@ -151,38 +153,48 @@
 </template>
 
 <script>
- import VueGoogleAutocomplete from "vue-google-autocomplete";
 
 export default {
   name:'Homelayout',
   
-  components: {
-    VueGoogleAutocomplete
-  },
+  components: {},
  data() {
     
      return {
         address: "",
+        options : {
+                bounds : {
+                    north: 36.778259 + 0.1,
+                    south: 36.778259 - 0.1,
+                    east: -119.417931 + 0.1,
+                    west: -119.417931 - 0.1,
+                },
+                componentRestrictions: { country: "us" },
+                fields: ["address_components", "geometry", "icon", "name","formatted_address","photo"],
+                origin:  { lat: 36.778259, lng: -119.417931 },
+                strictBounds: false,
+                types: [],
+            }
       };
   },
   mounted() {
-      
-      this.$refs.address.focus();
+      const autocomplete = new google.maps.places.Autocomplete(this.$refs.autocomplete,this.options);
+      this.$refs.autocomplete.focus();
+      autocomplete.addListener("place_changed", () => {
+        const place = autocomplete.getPlace();
+        this.address = place;
+        console.log(this.address);
+      });
     },
   methods : {
-          getAddressData: function (addressData, placeResultData, id) {
-          this.address = addressData;
-          console.log(this.address);
-      },
-      location_insert(){
-        if(this.address.locality ==="Manhattan Beach"){
+    find_location(){
+      if(this.address.formatted_address.includes("Manhattan")){
        window.open('https://manhattan.memoshishkebab.com', '_blank');
       }
-      else{
-        window.open('https://brooklyn.memoshishkebab.com/', '_blank');
+      if(this.address.formatted_address.includes("Brooklyn")){
+       window.open('https://brooklyn.memoshishkebab.com', '_blank');
       }
       }
-
   },
 }
 </script>
