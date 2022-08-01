@@ -96,6 +96,6 @@ Sorry there was an error sending your form.
 </footer>
 
 <div class="site-info">
-<p class="copyright">Copyright © 2019. All rights reserved.</p>
+<p class="copyright">Copyright © 2022. All rights reserved.</p>
 </div>
 </template>

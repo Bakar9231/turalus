@@ -88,9 +88,6 @@ svg.locPin {
   right: 10px;
 }
 
-.collapse.navbar-collapse{
-padding:20px;
-}
 
 .form-group {
   margin-bottom: 1rem;
@@ -150,7 +147,7 @@ padding:20px;
 }
 
 .navbar-nav .nav-link {
-  font-size: .85rem;
+  font-size: .75rem;
   font-weight: 700;
   position: relative;
   padding-top: 1rem;
@@ -196,12 +193,12 @@ padding:20px;
   left: 13px;
   top: 13px
 }
-
 #address-search {
-  width: 580px;
+  width: 500px;
   position: relative;
-  z-index: 9990
+  z-index: 9990;
 }
+
 
 #address-search-container input {
   border: 0;
@@ -303,14 +300,16 @@ padding:20px;
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  font-family: Oswald
+  font-family: Oswald;
+  font-size: 2rem;
 }
 
 .section-title {
   color: #c00a27;
   text-transform: uppercase;
   font-family: Oswald;
-  font-weight: 400
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .img-figure {
@@ -452,8 +451,8 @@ ul.store-timings>li:after {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
   width: 100%
 }
 
@@ -499,8 +498,8 @@ ul.store-timings>li:after {
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
   width: 100%;
   z-index:9;
 }
@@ -635,26 +634,40 @@ input[type=submit] {
 }
 
 
-@media only screen and (max-width:479px) {
-  .catering-body-text {
-    font-size: 7px;
-    padding: 20px
-  }
-}
+
 
 @media only screen and (max-width:710px) {
   #address-search-container input[type=submit] {
     width: 100%;
-    margin-top: 10px
+    margin-top: 10px;
   }
+ 
 
   #address-search-container .content,
   #address-search {
-    width: 100%
+    width: 100%;
+  }
+}
+@media only screen and (max-width:479px) {
+  .catering-body-text {
+    font-size: 7px;
+    padding: 20px;
   }
 }
 
 @media only screen and (max-width:767px) {
+  .form-group {
+    gap: 15px;
+  }
+  #footer{
+    padding-bottom: 2px;
+  }
+  .catering .catering-body {
+    padding: 0;
+}
+  .story-res {
+    padding: 0 15px !important;
+}
   .footer-contact-info .form-group.row .col-xs-12.col-md-6:first-child {
     margin-bottom: 15px;
   }
@@ -688,7 +701,7 @@ input[type=submit] {
   }
 
   .footer-contact-info {
-    margin-bottom: 50px
+    margin-bottom: 42px
   }
 
   .footer-contact-form .contact-form {

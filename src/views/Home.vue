@@ -28,7 +28,7 @@
     >
     </vue-google-autocomplete>-->
 
-    <input type="text" ref="autocomplete" placeholder="Search place" />
+    <input type="text" id="address-search" ref="autocomplete" placeholder="Search place" />
 
 </div>
 <input type="submit" value="Find location">
@@ -81,7 +81,7 @@
 <h2 class="text-uppercase">INSIDE OUR KITCHEN</h2>
 </div>
 <div class="container mt-4">
-<div class="col-lg-12 px-5">
+<div class="col-lg-12 px-5 story-res">
 <div class="row">
 <div class="col-lg-4 col-md-4 col-sm-4 col-12">
 <img src="../../public//kitchen-1.png" class="img-fluid d-block mx-auto">
@@ -120,26 +120,26 @@
 <h2 class="text-uppercase">About Us</h2>
 </div>
 <div class="container">
-<div class="col-lg-12 mt-3 px-5">
+<div class="col-lg-12 mt-3 px-5 story-res">
 <h2 class="section-title">Our History</h2>
 <div class="text">
 <p>Memo Shish Kebab was established in may of 2000 in Brooklyn NY but our story dates back 3 generations. Our grand father Mehmet (also known as Memo) started a local eatery in Urfa, Turkey using his homemade recipes. He has passed down his recipes and secrets from father to son.</p>
 <p>When we first started our operations in Brooklyn, our restaurant only had 3 tables. Since then we expanded twice, acquiring our neighbor stores and now we seat over 95 guests. We search and gather only the qualified spices from different countries, we use all-natural produces and halal meats. We adapt and accommodate our guests demands, and grow our menus for their preferences and taste. Our staff is well-trained and experienced, they will take extra measures to insure our guests’ satisfaction.</p>
 </div>
 </div>
-<div class="col-lg-12 mt-3 px-5">
+<div class="col-lg-12 mt-3 px-5 story-res">
 <h2 class="section-title">Our Mission</h2>
 <div class="text">
 <p>Our mission is to provide fresh Authentic Mediterranean cuisine in a warm atmosphere served by our friendly staff.</p>
 </div>
 </div>
-<div class="col-lg-12 mt-3 px-5">
+<div class="col-lg-12 mt-3 px-5 story-res">
 <h2 class="section-title">Our Vision</h2>
 <div class="text">
 <p>Our vision is to become the freshest and the most Authentic Mediterranean cuisine both nationally and globally. To build a brand name thats not only know to New Yorkers but to all in every state and every country. accessible and affordable for all.</p>
 </div>
 </div>
-<div class="wrap-instagram mt-5">
+<div class="wrap-instagram mt-5 story-res">
 <ul id="rudr_instafeed" class="list-unstyled row"></ul>
 </div>
 </div>
