@@ -126,9 +126,7 @@ svg.locPin {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
-  font-weight: 700;
-  padding: 25px 16px;
-  font-size: 13px;
+  padding: 25px 1rem;
 }
 
 .navbar-light {
@@ -149,7 +147,7 @@ svg.locPin {
   position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  transition: all .2s ease-in-out;
+  /* transition: all .2s ease-in-out; */
   transition-property: color;
   letter-spacing: 0;
   text-transform: uppercase
@@ -612,22 +610,20 @@ input[type=submit] {
   display: none !important
 }
 
-.headroom {
+/* .headroom {
   transition:all ease-in-out 0.4s
 }
 
 .headroom a{
   transition:all ease-in-out 0.4s
-}
+} */
 
 .v-header--bgchange {
   background-color: white;
-  transition:all ease-in-out 0.4s
 }
 
 .v-header--bgchange a{
   color: black !important;
-  transition:all ease-in-out 0.4s
 }
 
 

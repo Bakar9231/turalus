@@ -8,11 +8,14 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="#locations">Locations</a>
-        <a class="nav-link" href="#kitchen">Our Kitchen</a>
-        <a class="nav-link" href="#catering">Catering</a> 
-        <a class="nav-link" href="#about-us">About Us</a>
-        <a class="nav-link" href="#contact-us">Contact Us</a>
+        
+          
+        <a @click="removeShow()" class="nav-link scroll-link" href="#locations">Locations</a>
+        <a @click="removeShow()" class="nav-link scroll-link" href="#kitchen">Our Kitchen</a>
+        <a @click="removeShow()" class="nav-link scroll-link" href="#catering">Catering</a> 
+        <a @click="removeShow()" class="nav-link scroll-link" href="#about-us">About Us</a>
+        <a @click="removeShow()" class="nav-link scroll-link" href="#contact-us">Contact Us</a>
+       
       </div>
     </div>
   </div>
@@ -36,33 +39,53 @@ export default {
   },
   methods: {
 
-    addClass(){
-      let a= document.querySelector(".headroom");
-      if(a.classList.contains('navbar-dark')){
-          a.classList.remove("navbar-dark");
-          a.className += " navbar-light";
-      }
-      else{
-          a.classList.remove("navbar-light");
-          a.className += " navbar-dark";
-      }
-    },
+     addClass(){
+       let a= document.querySelector(".headroom");
+       if(a.classList.contains('navbar-dark')){
+           a.classList.remove("navbar-dark");
+           a.className += " navbar-light";
+       }
+       else{
+           a.classList.remove("navbar-light");
+           a.className += " navbar-dark";
+       }
+     },
+
+     removeShow(){
+       console.log("INNn");
+       let b= document.querySelector("#navbarNavAltMarkup");
+       if(b.classList.contains('show')){
+           b.classList.remove("show");
+           if(a.classList.contains('navbar-light')){
+             a.classList.remove("navbar-light");
+             a.className += " navbar-dark";
+           }
+           else if(a.classList.contains('navbar-dark')){
+             a.classList.remove("navbar-dark");
+             a.className += " navbar-light";
+           }
+       }
+     },
 
 
-    handleScroll(event) {
-      // Any code to be executed when the window is scrolled
-      const offsetTop = window.scrollY || 0;
-      const percentage = (offsetTop * 100) / document.body.scrollHeight;
+     handleScroll(event) {
+     
+       const offsetTop = window.scrollY || 0;
+       const percentage = (offsetTop * 100) / document.body.scrollHeight;
       
-      let header = document.querySelector(".headroom");
+       let header = document.querySelector(".headroom");
 
-      if(!header.className.includes('v-header--bgchange')){
-          header.className += " v-header--bgchange";
-      }
-      if(percentage === 0 && header.className.includes('v-header--bgchange')){
-        header.classList.remove("v-header--bgchange");
-      }
-    },
+       if(!header.className.includes('v-header--bgchange')){
+           header.className += " v-header--bgchange";
+       }
+       if(percentage === 0 && header.className.includes('v-header--bgchange')){
+         header.classList.remove("v-header--bgchange");
+         if(header.classList.contains('navbar-light')){
+             header.classList.remove("navbar-light");
+             header.className += " navbar-dark";
+           }
+       }
+   },
   },
 }
 </script>
