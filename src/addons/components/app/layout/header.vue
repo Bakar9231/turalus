@@ -1,9 +1,9 @@
 
 <template>
-<nav class="headroom navbar  navbar-togglable navbar-expand-lg fixed-top pt-0">
+<nav class="headroom navbar  navbar-togglable navbar-expand-lg fixed-top pt-0 navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand d-none" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button @click="addClass()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
@@ -36,7 +36,17 @@ export default {
   },
   methods: {
 
-    
+    addClass(){
+      let a= document.querySelector(".headroom");
+      if(a.classList.contains('navbar-dark')){
+          a.classList.remove("navbar-dark");
+          a.className += " navbar-light";
+      }
+      else{
+          a.classList.remove("navbar-light");
+          a.className += " navbar-dark";
+      }
+    },
 
 
     handleScroll(event) {

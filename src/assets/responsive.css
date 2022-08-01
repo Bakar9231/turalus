@@ -41,9 +41,6 @@
     .footer-contact-info {
       margin-bottom: 50px;
     }
-    .headroom {
-      background-color:white;
-    }
     .headroom  button.navbar-toggler {
       right: 0px;
     }
@@ -153,29 +150,8 @@
     #address-search-container {
       padding-bottom: 0px;
     }
-    .headroom {
-      transition: all ease-in-out 0.4s;
-    }
     #address-search-container {
       position: inherit;
     }
 
-    .collapse.navbar-collapse {
-      position: absolute;
-      top: -380px;
-      transition: all ease-in-out 0.6s;
-      display: block;
-      width: 100%;
-      background-color: white;
-      z-index: 2;
-    }
-    
-    .collapse.navbar-collapse.customShow {
-      top: 45px;
-      transition: all ease-in-out 0.6s;
-    }
-
-    div#mainMenu a {
-      color: black;
-    }
   }
