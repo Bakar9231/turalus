@@ -188,12 +188,16 @@ export default {
     },
   methods : {
     find_location(){
-      if(this.address.formatted_address.includes("Manhattan")){
-       window.open('https://manhattan.memoshishkebab.com', '_blank');
-      }
-      if(this.address.formatted_address.includes("Brooklyn")){
-       window.open('https://brooklyn.memoshishkebab.com', '_blank');
-      }
+      this.address.address_components.forEach(element => {
+        if(element.long_name.includes("Manhattan")){
+          window.open('https://manhattan.memoshishkebab.com', '_blank');   
+        }
+      });
+      this.address.address_components.forEach(element => {
+        if(element.long_name.includes("Brooklyn")){
+          window.open('https://brooklyn.memoshishkebab.com', '_blank'); 
+        }
+      });
       }
   },
 }
