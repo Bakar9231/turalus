@@ -66,7 +66,7 @@ export default {
       // Any code to be executed when the window is scrolled
       const offsetTop = window.scrollY || 0;
       const percentage = (offsetTop * 100) / document.body.scrollHeight;
-      console.log(percentage);
+      
       let header = document.querySelector(".headroom");
 
       if(!header.className.includes('v-header--bgchange')){

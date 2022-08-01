@@ -10,7 +10,8 @@
 </div>
 <div class="row">
 <div class="col-md-12 address-search-col mx-3">
-<form id="address-search-container">
+<form id="address-search-container" @submit.prevent="location_insert"
+          method="POST">
 <div class="content">
 <svg xmlns="http://www.w3.org/2000/svg" class="locPin" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -173,6 +174,14 @@ export default {
           this.address = addressData;
           console.log(this.address);
       },
+      location_insert(){
+        if(this.address.locality ==="Manhattan Beach"){
+       window.open('https://manhattan.memoshishkebab.com', '_blank');
+      }
+      else{
+        window.open('https://brooklyn.memoshishkebab.com/', '_blank');
+      }
+      }
 
   },
 }
