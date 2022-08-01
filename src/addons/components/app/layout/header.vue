@@ -47,10 +47,10 @@ export default {
   methods: {
 
     menuToggle(){
-      console.log("in menu function");
+      // console.log("in menu function");
         let menu = document.querySelector(".navbar-collapse");
         if(!menu.className.includes("customShow")){
-          console.log("in if");
+          // console.log("in if");
           menu.className += " customShow";
         }
         else{
@@ -59,7 +59,7 @@ export default {
     },
 
     task(){
-        console.log("Triggered just one time >= 80");
+        // console.log("Triggered just one time >= 80");
     },
 
     handleScroll(event) {
