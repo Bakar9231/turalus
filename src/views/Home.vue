@@ -183,7 +183,7 @@ export default {
       autocomplete.addListener("place_changed", () => {
         const place = autocomplete.getPlace();
         this.address = place;
-        console.log(this.address);
+        // console.log(this.address);
       });
     },
   methods : {
