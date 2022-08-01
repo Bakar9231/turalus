@@ -126,7 +126,8 @@ svg.locPin {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
-  font-weight: 700
+  font-weight: 700;
+  padding: 16px;
 }
 
 .navbar-light {
@@ -812,4 +813,6 @@ input[type=submit] {
   color:white;
 }
 
-
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: rgba(255,255,255,.75);
+}
