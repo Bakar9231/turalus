@@ -84,11 +84,6 @@ svg.locPin {
 }
 
 
-.headroom  button.navbar-toggler {
-  right: 10px;
-}
-
-
 .form-group {
   margin-bottom: 1rem;
 }
@@ -807,6 +802,14 @@ input[type=submit] {
   .logo img {
     max-width: 590px
   }
+  
+}
+.headroom  button.navbar-toggler {
+  right: 0px;
+}
+
+.nav-link{
+  color:white;
 }
 
 

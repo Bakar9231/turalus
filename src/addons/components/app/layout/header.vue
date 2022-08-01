@@ -1,31 +1,21 @@
 
 <template>
-<nav class="headroom header navbar navbar-expand-xl navbar-togglable fixed-top navbar-dark">
-<div class="container">
-<a class="navbar-brand" href="index.html"></a>
-<button @click="menuToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="mainMenu">
-<ul class="navbar-nav m-auto">
-<li class="nav-item">
-<a class="nav-link scroll-link" href="#locations">Locations</a>
-</li>
-<li class="nav-item">
-<a class="nav-link scroll-link" href="#kitchen">Our Kitchen</a>
-</li>
-<li class="nav-item">
-<a class="nav-link scroll-link" href="#catering">Catering</a>
-</li>
-<li class="nav-item">
-<a class="nav-link scroll-link" href="#about-us">About Us</a>
-</li>
-<li class="nav-item">
-<a class="nav-link scroll-link" href="#contact-us">Contact Us</a>
-</li>
-</ul>
-</div>
-</div>
+<nav class="headroom navbar  navbar-togglable navbar-expand-lg fixed-top pt-0">
+  <div class="container-fluid">
+    <a class="navbar-brand d-none" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#locations">Locations</a>
+        <a class="nav-link" href="#kitchen">Our Kitchen</a>
+        <a class="nav-link" href="#catering">Catering</a> 
+        <a class="nav-link" href="#about-us">About Us</a>
+        <a class="nav-link" href="#contact-us">Contact Us</a>
+      </div>
+    </div>
+  </div>
 </nav>
 </template>
 
@@ -46,21 +36,8 @@ export default {
   },
   methods: {
 
-    menuToggle(){
-      // console.log("in menu function");
-        let menu = document.querySelector(".navbar-collapse");
-        if(!menu.className.includes("customShow")){
-          // console.log("in if");
-          menu.className += " customShow";
-        }
-        else{
-          menu.classList.remove("customShow");
-        }
-    },
+    
 
-    task(){
-        // console.log("Triggered just one time >= 80");
-    },
 
     handleScroll(event) {
       // Any code to be executed when the window is scrolled
