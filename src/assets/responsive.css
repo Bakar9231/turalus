@@ -32,19 +32,6 @@
     
   }
   @media only screen and (max-width: 991px) {
- 
-    .headroom  button.navbar-toggler {
-      right: 0px;
-    }
-    .nav-link{
-      color:black;
-    }
-    .headroom .container-fluid {
-      padding-top: 8px;
-      padding-left: 15px;
-      padding-right: 15px;
-      justify-content: right;
-    }
     .site-info {
       background-color: #232d35;
     }
@@ -54,7 +41,9 @@
     .footer-contact-info {
       margin-bottom: 50px;
     }
-  
+    .headroom {
+      background-color:white;
+    }
     .headroom  button.navbar-toggler {
       right: 0px;
     }
@@ -75,13 +64,11 @@
       bottom: 0;
       margin-bottom: 50px;
     }
-
   }
   @media only screen and (min-width: 576px) and (max-width: 991px) {
     .wrap-instagram ul li img {
       height: 120px;
     }
-    
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .card-button {
@@ -114,7 +101,6 @@
     }
   }
   @media only screen and (min-width: 992px) {
-    
     .col-full,
     .container {
       width: 970px;
@@ -152,7 +138,6 @@
     .logo img {
       max-width: 590px;
     }
-    
   }
   
 
@@ -175,5 +160,22 @@
       position: inherit;
     }
 
+    .collapse.navbar-collapse {
+      position: absolute;
+      top: -380px;
+      transition: all ease-in-out 0.6s;
+      display: block;
+      width: 100%;
+      background-color: white;
+      z-index: 2;
+    }
     
+    .collapse.navbar-collapse.customShow {
+      top: 45px;
+      transition: all ease-in-out 0.6s;
+    }
+
+    div#mainMenu a {
+      color: black;
+    }
   }
