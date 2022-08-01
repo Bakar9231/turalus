@@ -15,7 +15,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="locPin" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
 </svg>
-<input type="text" id="address-search" placeholder="Enter a location" autocomplete="on" class="pac-target-input">
+
+<vue-google-autocomplete
+      id="map2"
+  ref="toAddress"
+  classname="form-control"
+  placeholder="Start typing"
+  v-on:placechanged="getAddressData"
+  types="(cities)"
+  country="us"
+    >
+    </vue-google-autocomplete>
+
 </div>
 <input type="submit" value="Find location">
 </form>
@@ -139,19 +150,30 @@
 </template>
 
 <script>
-
+ import VueGoogleAutocomplete from "vue-google-autocomplete";
 
 export default {
   name:'Homelayout',
   
   components: {
-    
+    VueGoogleAutocomplete
   },
  data() {
     
+     return {
+        address: "",
+      };
   },
+  mounted() {
+      
+      this.$refs.address.focus();
+    },
   methods : {
-    
+          getAddressData: function (addressData, placeResultData, id) {
+          this.address = addressData;
+          console.log(this.address);
+      },
+
   },
 }
 </script>
