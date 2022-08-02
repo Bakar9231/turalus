@@ -32,6 +32,11 @@
     
   }
   @media only screen and (max-width: 991px) {
+    nav.headroom.navbar {
+      justify-content: right;
+      padding: .5rem 1rem;
+    }
+    
     .site-info {
       background-color: #232d35;
     }
@@ -44,8 +49,8 @@
     .headroom  button.navbar-toggler {
       right: 0px;
     }
-    .nav-link{
-      color:black;
+    .navbar-dark .navbar-nav .nav-link{
+      color:black !important;
     }
     .headroom .container-fluid {
       padding-top: 8px;

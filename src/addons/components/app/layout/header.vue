@@ -1,23 +1,28 @@
 
 <template>
-<nav class="headroom navbar  navbar-togglable navbar-expand-lg fixed-top pt-0 navbar-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand d-none" href="#">Navbar</a>
-    <button @click="addClass()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        
-          
+<nav class="headroom navbar navbar-expand-lg navbar-dark fixed-top">
+  <button @click="addClass()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
         <a @click="removeShow()" class="nav-link scroll-link" href="#locations">Locations</a>
+      </li>
+      <li class="nav-item">
         <a @click="removeShow()" class="nav-link scroll-link" href="#kitchen">Our Kitchen</a>
-        <a @click="removeShow()" class="nav-link scroll-link" href="#catering">Catering</a> 
+      </li>
+      <li class="nav-item dropdown">
+         <a @click="removeShow()" class="nav-link scroll-link" href="#catering">Catering</a> 
+      </li>
+      <li class="nav-item">
         <a @click="removeShow()" class="nav-link scroll-link" href="#about-us">About Us</a>
+      </li>
+      <li class="nav-item">
         <a @click="removeShow()" class="nav-link scroll-link" href="#contact-us">Contact Us</a>
-       
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </nav>
 </template>
@@ -39,6 +44,10 @@ export default {
   },
   methods: {
 
+      // delayTimer() {
+      //   timeoutID = setTimeout("addClass", 3000);
+      // },
+
      addClass(){
        let a= document.querySelector(".headroom");
        if(a.classList.contains('navbar-dark')){
@@ -52,8 +61,7 @@ export default {
      },
 
      removeShow(){
-       console.log("INNn");
-       let b= document.querySelector("#navbarNavAltMarkup");
+       let b= document.querySelector("#navbarSupportedContent");
        if(b.classList.contains('show')){
            b.classList.remove("show");
            if(a.classList.contains('navbar-light')){

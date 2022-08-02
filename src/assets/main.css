@@ -126,11 +126,6 @@ svg.locPin {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
-  padding: 25px 1rem;
-}
-
-.navbar-light {
-  color: #212529
 }
 
 .navbar-light:before {
@@ -147,16 +142,21 @@ svg.locPin {
   position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* transition: all .2s ease-in-out; */
+  transition: all .2s ease-in-out;
   transition-property: color;
   letter-spacing: 0;
   text-transform: uppercase
 }
 
-.navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 15px;
-}
+} */
 
 .nav-link {
   display: block;
@@ -366,7 +366,7 @@ svg.locPin {
 
 .catering .catering-body {
   margin-top: 100px;
-  padding:0 30px;
+  padding:0px;
 }
 
 .catering .catering-body .catering-body-text {
@@ -809,5 +809,9 @@ input[type=submit] {
 .nav-link{
   color:white;
 }
+
+
+
+
 
 
