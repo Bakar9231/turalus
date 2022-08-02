@@ -52,6 +52,10 @@
     .navbar-dark .navbar-nav .nav-link{
       color:black !important;
     }
+    .nav-link{
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
     .headroom .container-fluid {
       padding-top: 8px;
       padding-left: 15px;

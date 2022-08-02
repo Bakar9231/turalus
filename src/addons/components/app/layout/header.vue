@@ -1,7 +1,7 @@
 
 <template>
 <nav class="headroom navbar navbar-expand-lg navbar-dark fixed-top">
-  <button @click="addClass()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button @click="delayTimer()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -44,9 +44,14 @@ export default {
   },
   methods: {
 
-      // delayTimer() {
-      //   timeoutID = setTimeout("addClass", 3000);
-      // },
+      delayTimer() {
+        let a= document.querySelector(".headroom");
+       if(!a.classList.contains('navbar-dark')){
+         timeoutID = setTimeout(this.addClass, 400);
+       }else{
+        this.addClass();
+       }
+      },
 
      addClass(){
        let a= document.querySelector(".headroom");
