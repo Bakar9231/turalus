@@ -87,7 +87,10 @@ svg.locPin {
 .form-group {
   margin-bottom: 1rem;
 }
-
+.bg-cover img{
+  width: 100%;
+  height: -webkit-fill-available;
+}
 .navbar:before {
   position: absolute;
   z-index: -1;

@@ -1,6 +1,8 @@
 <template>
   <section class="section section-top section-full">
-<div class="bg-cover" style="background: url('../../public/img2-cut.jpg')"></div>
+<div class="bg-cover">
+<img src="../../public/img2-cut.jpg">
+</div>
 <div class="bg-overlay"></div>
 <div class="container">
 <div class="row justify-content-center align-items-center">

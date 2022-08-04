@@ -6,7 +6,7 @@
 <div class="footer-contact-info">
 <div class="footer-logo">
 <a href="index.html">
-<img src="public/logo-footer.png">
+<img src="../../../../../public/logo-footer.png">
 </a>
 </div>
 <ul class="list-unstyled store-timings">
